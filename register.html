@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
+    <title>Register</title>
   </head>
-  <body>
+  <body>    
     <style>
         h1{
             text-align: center;
@@ -15,24 +15,22 @@
             border: 2px solid black;
             width: 40%;
         }
-        th{
-            text-align: left;
-            background-color: #6CD2FE;
-        }
-        input{
-            width: 40%;
-        }
     </style>
-    <h1>สมัครสมชิก</h1>
+    <h1>สมัครสมาชิก</h1>
     <hr>
-    <table>
-        <tr><th>เข้าสู่ระบบ</th><th></th></tr>
-        <tr><td>Login</td><td><input type="text" name="text"></td></tr>
-        <tr><td>Password</td><td><input type="Password" name="Password"></td></tr>
+    <table align="center">
+      <tr><td colspan="2" style="background-color: #6CD2FE;">กรอกข้อมูล</td></tr>
+      <tr><td>ชื่อบัญชี: </td><td><input type="text" name="User"></td></tr>
+      <tr><td>รหัสผ่าน: </td><td><input type="password" name="Pass"></td></tr>
+      <tr><td>รหัสผ่าน: </td><td><input type="password" name="Pass"></td></tr>
+      <tr><td>ชื่อ-นามสกุล: </td><td><input type="text" name="Name"></td></tr>
+      <input type="checkbox" name="prog" value="0">
+      <tr><td colspan="2" align="center"><input type="submit" value="Login"></td></tr>
     </table>
     <br>
-    <a href= "login.html">กรุณาสมัครสมชิก</a>
-    
+    <div align="center">
+        <a href= "login.html">กลับสู่หน้าหลัก</a>
+    </div>
     
   </body>
 </html>
