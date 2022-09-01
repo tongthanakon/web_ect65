@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Post</title>
   </head>
   <body>
     <style>
@@ -18,19 +18,17 @@
     </style>
     <h1>Webborad KakKak</h1>
     <hr>
+    <p align="center">ต้องการดูกระทู้หมายเลข <?php echo $_GET["id"]; ?></p>
     <table align="center">
       <form action="verify.php" method="post">
-      <tr><td colspan="2" style="background-color: #6CD2FE;">เข้าสู่ระบบ</td></tr>
-      <tr><td>Login</td><td><input type="text" name="User" size="50"></td></tr>
-      <tr><td>Password</td><td><input type="password" name="Pass" size="50"></td></tr>
-      <tr><td colspan="2" align="center"><input type="submit" value="Login"></td></tr>
+      <tr><td colspan="2" style="background-color: #6CD2FE;">แสดงความคิดเห็น</td></tr>
+      <tr><td><textarea rows="5"cols="100"></textarea></td></tr>
+      <tr><td colspan="2" align="center"><input type="submit" value="ส่งข้อความ"></td></tr>
       </form>
     </table>
     <br>  
     <div align="center">
-      ถ้ายังไม่ได้เป็นสมาชิก <a href= "register.html">กรุณาสมัครสมาชิก</a>
+      <a href= "index.html">กลับไปหน้าหลัก</a>
     </div>
-    
-    
   </body>
 </html>
