@@ -18,7 +18,14 @@
     </style>
     <h1>Webborad KakKak</h1>
     <hr>
-    <p align="center">ต้องการดูกระทู้หมายเลข <?php echo $_GET["id"]; ?></p>
+    <p align="center">ต้องการดูกระทู้หมายเลข <?php echo $_GET["id"]; ?><br>
+    <?php
+        if($_GET['id']%2==0){
+          echo "เป็นกระทู้หมายเลขคู่";
+        }else{
+          echo "เป็นกระทู้หมายเลขคี่";
+        }
+    ?></p>
     <table align="center">
       <form action="verify.php" method="post">
       <tr><td colspan="2" style="background-color: #6CD2FE;">แสดงความคิดเห็น</td></tr>
@@ -28,7 +35,7 @@
     </table>
     <br>  
     <div align="center">
-      <a href= "index.html">กลับไปหน้าหลัก</a>
+      <a href= "index.php">กลับไปหน้าหลัก</a>
     </div>
   </body>
 </html>

@@ -20,13 +20,25 @@
     </style>
     <h1>Webborad KakKak</h1>
     <hr>
-    <div>
+    <div align="cenert">
         <?php
-          echo "เข้าสู่ระบบด้วย";
+          $User = $_POST["User"];
+          $Pass = $_POST["Pass"];
+
+        
+          //echo "เข้าสู่ระบบด้วย";
+          //echo "<br>";
+          //echo "Login=".$_POST["User"];
+          if( $User == "admin" && $Pass == "ad1234"){
+            echo "ยินดีต้อนรับคุณ ADMIN";
+          }else if( $User == "member" && $Pass == "mem1234"){
+            echo "ยินดีต้อนรับคุณ MEMBER";
+          }else{
+            echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง";
+          }
           echo "<br>";
-          echo "Login=".$_POST["User"]; 
-          echo "<br>";
-          echo "Password=".$_POST["Pass"];
+          //echo "Password=".$_POST["Pass"];
+          echo "<a href= login.html>กลับสู่หน้าหลัก</a>";
       ?>
     </div>
 </body>
