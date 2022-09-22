@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  if(isset($_SESSION['id'])){
+    header("location:index.php");
+    die();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,20 +32,25 @@
           $User = $_POST["User"];
           $Pass = $_POST["Pass"];
 
-        
           //echo "เข้าสู่ระบบด้วย";
           //echo "<br>";
           //echo "Login=".$_POST["User"];
           if( $User == "admin" && $Pass == "ad1234"){
             echo "ยินดีต้อนรับคุณ ADMIN";
+            $_SESSION['username']='admin';
+            $_SESSION['role']='a';
+            $_SESSION['id']=session_id();
           }else if( $User == "member" && $Pass == "mem1234"){
             echo "ยินดีต้อนรับคุณ MEMBER";
+            $_SESSION['username']='member';
+            $_SESSION['role']='m';
+            $_SESSION['id']=session_id();
           }else{
             echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง";
           }
           echo "<br>";
           //echo "Password=".$_POST["Pass"];
-          echo "<a href= login.html>กลับสู่หน้าหลัก</a>";
+          echo "<a href= index.php>กลับสู่หน้าหลัก</a>";
       ?>
     </div>
 </body>
